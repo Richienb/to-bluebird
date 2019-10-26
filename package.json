@@ -1,8 +1,8 @@
 {
-    "name": "the-module",
+    "name": "to-bluebird",
     "version": "0.0.0",
-    "description": "My awesome module.",
-    "repository": "https://github.com/Richienb/the-module.git",
+    "description": "Convert any type of promise to a Bluebird promise",
+    "repository": "https://github.com/Richienb/to-bluebird.git",
     "author": "Richie Bendall <richiebendall@gmail.com>",
     "license": "MIT",
     "main": "index.js",
@@ -11,18 +11,24 @@
         "index.d.ts"
     ],
     "engines": {
-        "node": ">=8"
+        "node": ">=6"
     },
     "scripts": {
         "lint": "eslint .",
         "test": "yarn lint && ava"
     },
     "keywords": [],
-    "dependencies": {},
+    "dependencies": {
+        "convert-promise": "^1.0.0"
+    },
     "devDependencies": {
         "ava": "^2.1.0",
         "eslint": "^6.5.1",
-        "eslint-config-richienb": "^0.2.0"
+        "eslint-config-richienb": "^0.2.0",
+        "p-is-promise": "^3.0.0"
+    },
+    "peerDependencies": {
+        "bluebird": "^3.7.1"
     },
     "eslintConfig": {
         "extends": "richienb/node"

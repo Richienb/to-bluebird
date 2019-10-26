@@ -1,41 +1,30 @@
-# The module [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/the-module)
+# To Bluebird [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/to-bluebird/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/to-bluebird)
 
-My awesome module.
+Convert any type of promise to a Bluebird promise
 
-[![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
+[![NPM Badge](https://nodei.co/npm/to-bluebird.png)](https://npmjs.com/package/to-bluebird)
 
 ## Install
 
 ```sh
-npm install the-module
+npm install to-bluebird bluebird
 ```
 
 ## Usage
 
 ```js
-const theModule = require("the-module");
+const toBluebird = require("to-bluebird");
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+const es6Promise = new Promise(resolve => resolve("Hello World!")); // Regular native promise.
+const bluebirdPromise = toBluebird(es6Promise); // Bluebird promise.
 ```
 
 ## API
 
-### theModule(input, options?)
+### toBluebird(promise)
 
-#### input
+#### promise
 
-Type: `string`
+Type: `PromiseLike`
 
-Lorem ipsum.
-
-#### options
-
-Type: `object`
-
-##### postfix
-
-Type: `string`\
-Default: `rainbows`
-
-Lorem ipsum.
+The promise to convert.

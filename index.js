@@ -1,7 +1,6 @@
 "use strict"
 
-module.exports = (input, { postfix = "rainbows" } = {}) => {
-    if (typeof input !== "string") throw new TypeError(`Expected a string, got ${typeof input}`)
+const convertPromise = require("convert-promise")
+const BBPromise = require("bluebird")
 
-    return `${input} & ${postfix}`
-}
+module.exports = (promise) => convertPromise(promise, BBPromise)

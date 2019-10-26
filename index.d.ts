@@ -1,14 +1,16 @@
+import BBPromise from "bluebird"
+
 /**
  * My awesome module.
- * @param input Lorem ipsum.
- * @param postfix Lorem ipsum.
+ * @param promise The promise to convert.
  * @example
  * ```
- * const theModule = require("the-module");
- * theModule("unicorns");
- * //=> 'unicorns & rainbows'
+ * const toBluebird = require("to-bluebird");
+ *
+ * const es6Promise = new Promise(resolve => resolve("Hello World!")); // Regular native promise.
+ * const bluebirdPromise = toBluebird(es6Promise); // Bluebird promise.
  * ```
 */
-declare function theModule(input: string, { postfix }: { postfix?: string }): string;
+declare function toBluebird(promise: PromiseLike): BBPromise;
 
-export = theModule;
+export = toBluebird;

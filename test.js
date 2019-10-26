@@ -1,13 +1,11 @@
 import test from "ava"
-import theModule from "."
+import toBluebird from "."
+import isPromise from "p-is-promise"
 
 test("main", (t) => {
-    t.throws(() => {
-        theModule(123)
-    }, {
-        instanceOf: TypeError,
-        message: "Expected a string, got number",
-    })
+    const es6Promise = new Promise((resolve) => resolve("Hello World!")) // Regular native promise.
+    t.true(isPromise(es6Promise))
 
-    t.is(theModule("unicorns"), "unicorns & rainbows")
+    const bluebirdPromise = toBluebird(es6Promise) // Bluebird promise.
+    t.true(isPromise(bluebirdPromise))
 })
