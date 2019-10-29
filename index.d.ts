@@ -1,7 +1,7 @@
 import BBPromise from "bluebird"
 
 /**
- * My awesome module.
+ * Convert any type of promise to a Bluebird promise
  * @param promise The promise to convert.
  * @example
  * ```
@@ -11,6 +11,6 @@ import BBPromise from "bluebird"
  * const bluebirdPromise = toBluebird(es6Promise); // Bluebird promise.
  * ```
 */
-declare function toBluebird(promise: PromiseLike): BBPromise;
+declare function toBluebird<T>(promise: PromiseLike<T>): BBPromise<T>;
 
 export = toBluebird;
