@@ -19,16 +19,16 @@
     },
     "keywords": [],
     "dependencies": {
-        "convert-promise": "^1.0.0"
+        "convert-promise": "^1.0.1"
     },
     "devDependencies": {
         "ava": "^2.1.0",
-        "eslint": "^6.5.1",
+        "eslint": "^6.6.0",
         "eslint-config-richienb": "^0.2.0",
         "p-is-promise": "^3.0.0"
     },
     "peerDependencies": {
-        "bluebird": "^3.7.1"
+        "bluebird": "*"
     },
     "eslintConfig": {
         "extends": "richienb/node"
